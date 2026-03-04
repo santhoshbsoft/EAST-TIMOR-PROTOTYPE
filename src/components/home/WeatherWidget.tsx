@@ -1,0 +1,114 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Sun, CloudRain, Wind, Droplets, Thermometer, Calendar } from 'lucide-react';
+
+const municipalities = ['Dili', 'Atauro', 'Baucau', 'Lospalos', 'Viqueque'];
+
+const WeatherWidget = () => {
+    return (
+        <section className="py-24 bg-ocean-deep">
+            <div className="max-w-7xl mx-auto px-6">
+                <div className="glass-dark rounded-[40px] p-8 md:p-12 overflow-hidden relative">
+                    {/* Background Gradient Orbs */}
+                    <div className="absolute top-0 right-0 w-96 h-96 bg-tropical-teal/20 rounded-full blur-[100px] -mr-48 -mt-48"></div>
+
+                    <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <motion.span
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                className="text-sunset-coral font-bold tracking-widest text-sm uppercase mb-4 block"
+                            >
+                                Local Conditions
+                            </motion.span>
+                            <h2 className="section-title text-4xl md:text-5xl mb-6">Real-Time Weather</h2>
+                            <p className="opacity-70 mb-8 max-w-md">
+                                Plan your adventure with precision. Monitor current conditions across all 13 municipalities for the perfect dive or trek.
+                            </p>
+
+                            <div className="flex flex-wrap gap-4 mb-10">
+                                {municipalities.map((city, idx) => (
+                                    <button
+                                        key={city}
+                                        className={`px-6 py-2 rounded-full border transition-all ${idx === 0 ? 'bg-white text-ocean-deep border-white' : 'border-white/10 hover:border-white/40'}`}
+                                    >
+                                        {city}
+                                    </button>
+                                ))}
+                            </div>
+
+                            <div className="grid grid-cols-2 gap-6">
+                                <div className="flex items-center space-x-4 glass p-4 rounded-2xl">
+                                    <div className="text-sunset-coral"><Wind size={24} /></div>
+                                    <div>
+                                        <p className="text-xs opacity-50 uppercase font-bold tracking-tighter">Wind Speed</p>
+                                        <p className="font-bold">12 km/h</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-center space-x-4 glass p-4 rounded-2xl">
+                                    <div className="text-sunset-coral"><Droplets size={24} /></div>
+                                    <div>
+                                        <p className="text-xs opacity-50 uppercase font-bold tracking-tighter">Humidity</p>
+                                        <p className="font-bold">78%</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-center space-x-4 glass p-4 rounded-2xl">
+                                    <div className="text-sunset-coral"><Sun size={24} /></div>
+                                    <div>
+                                        <p className="text-xs opacity-50 uppercase font-bold tracking-tighter">UV Index</p>
+                                        <p className="font-bold">High (8)</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-center space-x-4 glass p-4 rounded-2xl">
+                                    <div className="text-sunset-coral"><Thermometer size={24} /></div>
+                                    <div>
+                                        <p className="text-xs opacity-50 uppercase font-bold tracking-tighter">Feels Like</p>
+                                        <p className="font-bold">32°C</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="lg:pl-12">
+                            <div className="glass p-8 md:p-12 rounded-[32px] text-center border-white/10 relative overflow-hidden group">
+                                <div className="absolute inset-0 bg-gradient-to-br from-sunset-coral/10 to-transparent"></div>
+
+                                <div className="relative z-10">
+                                    <div className="flex justify-center mb-6">
+                                        <motion.div
+                                            animate={{
+                                                rotate: [0, 5, -5, 0],
+                                                scale: [1, 1.05, 1]
+                                            }}
+                                            transition={{ duration: 4, repeat: Infinity }}
+                                            className="text-sunset-coral"
+                                        >
+                                            <Sun size={120} strokeWidth={1.5} />
+                                        </motion.div>
+                                    </div>
+
+                                    <div className="flex flex-col items-center">
+                                        <span className="text-8xl md:text-9xl font-bold tracking-tighter">29°</span>
+                                        <span className="text-2xl opacity-70 font-serif italic mb-8">Mostly Sunny</span>
+                                    </div>
+
+                                    <div className="flex justify-between items-center pt-8 border-t border-white/10">
+                                        {[1, 2, 3, 4, 5].map((day) => (
+                                            <div key={day} className="flex flex-col items-center">
+                                                <span className="text-[10px] opacity-50 uppercase font-bold mb-2">Day {day}</span>
+                                                <Sun size={20} className="text-sunset-coral mb-2" />
+                                                <span className="text-sm font-bold">30°</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default WeatherWidget;
