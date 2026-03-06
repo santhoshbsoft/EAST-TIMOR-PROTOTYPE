@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Globe, User } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -24,26 +24,11 @@ const Navbar = () => {
         { name: 'Plan Your Trip', path: '/plan-your-trip' },
     ];
 
-    const lightPages = [
-        '/plan-your-trip/business-attractions',
-        '/plan-your-trip/flights-entry-requirements',
-        '/plan-your-trip/transport',
-        '/plan-your-trip/recommended-itineraries',
-        '/shopping-services',
-        '/plan-your-trip/shopping-services'
-    ];
-
-    const isLightPage = lightPages.some(path => location.pathname.startsWith(path));
-    const textColor = scrolled ? 'text-white' : (isLightPage ? 'text-slate-900' : 'text-white');
-    const accentColor = scrolled ? 'text-tropical-mint' : (isLightPage ? 'text-tropical-teal' : 'text-tropical-mint');
-    const hoverColor = scrolled ? 'hover:text-tropical-mint' : (isLightPage ? 'hover:text-tropical-teal' : 'hover:text-tropical-mint');
-    const borderColor = scrolled ? 'border-white/10' : (isLightPage ? 'border-slate-200' : 'border-white/10');
-
     return (
         <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'bg-forest-green shadow-xl py-4' : 'bg-transparent py-6'}`}>
             <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-                <Link to="/" className={`text-2xl font-serif font-bold tracking-tighter ${textColor}`}>
-                    TIMOR-<span className={accentColor}>LESTE</span>
+                <Link to="/" className="text-2xl font-serif font-bold tracking-tighter text-white">
+                    TIMOR-<span className="text-tropical-mint">LESTE</span>
                 </Link>
 
                 {/* Desktop Nav */}
@@ -52,16 +37,16 @@ const Navbar = () => {
                         <Link
                             key={link.name}
                             to={link.path}
-                            className={`font-medium transition-colors ${hoverColor} ${location.pathname === link.path ? accentColor : textColor}`}
+                            className={`text-gray-100 hover:text-tropical-mint font-medium transition-colors ${location.pathname === link.path ? 'text-tropical-mint' : ''}`}
                         >
                             {link.name}
                         </Link>
                     ))}
-                    <div className={`flex items-center space-x-6 pl-6 border-l ${borderColor}`}>
-                        <button className={`${textColor} ${hoverColor} transition-colors`}>
+                    <div className="flex items-center space-x-6 pl-6 border-l border-white/10">
+                        <button className="text-white hover:text-tropical-mint transition-colors">
                             <Globe size={20} />
                         </button>
-                        <Link to="/login" className={`${textColor} ${hoverColor} transition-colors`}>
+                        <Link to="/login" className="text-white hover:text-tropical-mint transition-colors">
                             <User size={20} />
                         </Link>
                     </div>
@@ -69,7 +54,7 @@ const Navbar = () => {
 
                 {/* Mobile Menu Toggle */}
                 <button
-                    className={`md:hidden ${scrolled ? 'text-white' : (isLightPage ? 'text-slate-900' : 'text-sand-beige')}`}
+                    className="md:hidden text-sand-beige"
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     {isOpen ? <X size={28} /> : <Menu size={28} />}

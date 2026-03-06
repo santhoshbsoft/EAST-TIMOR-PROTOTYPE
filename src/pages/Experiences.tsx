@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Waves, Mountain, Landmark, Utensils, MapPin, Star, Clock, Users, Filter, X, ChevronRight, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Waves, Mountain, Landmark, Utensils, MapPin, Star, Clock, X } from 'lucide-react';
 
 interface Activity {
     id: string;
@@ -93,7 +92,6 @@ const activities: Activity[] = [
 const ExperienceListing = () => {
     const [activeCategory, setActiveCategory] = useState('all');
     const [activeSubcategory, setActiveSubcategory] = useState<string | null>(null);
-    const [showFilters, setShowFilters] = useState(false);
 
     const currentCategory = categories.find(c => c.id === activeCategory);
 

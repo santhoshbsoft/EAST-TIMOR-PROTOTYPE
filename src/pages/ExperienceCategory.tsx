@@ -1,4 +1,4 @@
-import React from 'react';
+'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Star, Clock, Users, ShieldCheck, ChevronRight } from 'lucide-react';

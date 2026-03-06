@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import {
     LayoutDashboard, Users, CalendarCheck, FileEdit, TrendingUp,
     DollarSign, Map, Download, Eye, Edit, Trash2, Plus,
-    CheckCircle, XCircle, Clock, Globe, Star, ArrowUpRight, LogOut
+    CheckCircle, XCircle, Clock, Globe, Star, LogOut
 } from 'lucide-react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, PieChart, Pie, Cell } from 'recharts';
 import { useNavigate } from 'react-router-dom';

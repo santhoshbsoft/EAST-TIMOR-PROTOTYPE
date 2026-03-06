@@ -10,6 +10,40 @@ import ExperienceCategory from './pages/ExperienceCategory';
 import Auth from './pages/Auth';
 import TouristDashboard from './pages/TouristDashboard';
 import AdminDashboard from './pages/AdminDashboard';
+import PlanYourTrip from './pages/PlanYourTrip';
+import SafetyHealth from './pages/SafetyHealth';
+import EventsCalendar from './pages/EventsCalendar';
+import EventDetail from './pages/EventDetail';
+import TravelTips from './pages/TravelTips';
+
+// Business & Attraction Module
+import BusinessDirectory from './pages/BusinessDirectory';
+import BusinessDetails from './pages/BusinessDetails';
+
+// Accommodation Module
+import Accommodation from './pages/Accommodation';
+import AccommodationDetail from './pages/AccommodationDetail';
+import AccommodationBooking from './pages/AccommodationBooking';
+import AccommodationPayment from './pages/AccommodationPayment';
+import AccommodationSuccess from './pages/AccommodationSuccess';
+
+// Flight & Entry Module
+import FlightsEntryMain from './pages/FlightEntry/FlightsEntryMain';
+import AirlineDetail from './pages/FlightEntry/AirlineDetail';
+import EntryRequirementsPage from './pages/FlightEntry/EntryRequirementsPage';
+
+// Transport Module
+import TransportMain from './pages/Transport/TransportMain';
+import TransportDetail from './pages/Transport/TransportDetail';
+
+// Itineraries Module
+// Itineraries Module
+import ItinerariesMain from './pages/Itineraries/ItinerariesMain';
+import ItineraryDetail from './pages/Itineraries/ItineraryDetail';
+
+// Shopping Module
+import ShoppingMain from './pages/Shopping/ShoppingMain';
+import ShoppingDetail from './pages/Shopping/ShoppingDetail';
 
 function App() {
     return (
@@ -26,7 +60,33 @@ function App() {
                     <Route path="/register" element={<Auth mode="register" />} />
                     <Route path="/dashboard" element={<TouristDashboard />} />
                     <Route path="/admin" element={<AdminDashboard />} />
-                    {/* Add all 30 routes here eventually */}
+                    <Route path="/plan-your-trip" element={<PlanYourTrip />} />
+                    <Route path="/safety-health" element={<SafetyHealth />} />
+                    <Route path="/events-calendar" element={<EventsCalendar />} />
+                    <Route path="/events-calendar/:id" element={<EventDetail />} />
+                    <Route path="/travel-tips" element={<TravelTips />} />
+                    <Route path="/plan-your-trip/accommodation" element={<Accommodation />} />
+                    <Route path="/accommodation/:id" element={<AccommodationDetail />} />
+                    <Route path="/accommodation/:accommodationId/room/:roomId" element={<AccommodationBooking />} />
+                    <Route path="/accommodation/:accommodationId/room/:roomId/payment" element={<AccommodationPayment />} />
+                    <Route path="/accommodation/:accommodationId/room/:roomId/confirmation" element={<AccommodationSuccess />} />
+
+                    <Route path="/plan-your-trip/business-attractions" element={<BusinessDirectory />} />
+                    <Route path="/plan-your-trip/business-attractions/:id" element={<BusinessDetails />} />
+                    <Route path="/business-services/:id" element={<BusinessDetails />} />
+
+                    <Route path="/plan-your-trip/flights-entry-requirements" element={<FlightsEntryMain />} />
+                    <Route path="/plan-your-trip/flights-entry-requirements/entry-requirements" element={<EntryRequirementsPage />} />
+                    <Route path="/plan-your-trip/flights-entry-requirements/:airlineId" element={<AirlineDetail />} />
+                    <Route path="/plan-your-trip/transport" element={<TransportMain />} />
+                    <Route path="/plan-your-trip/transport/:typeId" element={<TransportDetail />} />
+                    <Route path="/plan-your-trip/recommended-itineraries" element={<ItinerariesMain />} />
+                    <Route path="/plan-your-trip/recommended-itineraries/:id" element={<ItineraryDetail />} />
+
+                    <Route path="/shopping-services" element={<ShoppingMain />} />
+                    <Route path="/shopping-services/:id" element={<ShoppingDetail />} />
+                    <Route path="/plan-your-trip/shopping-services" element={<ShoppingMain />} />
+                    <Route path="/plan-your-trip/shopping-services/:id" element={<ShoppingDetail />} />
                 </Routes>
             </Layout>
         </Router>
