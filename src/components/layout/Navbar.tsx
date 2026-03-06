@@ -33,6 +33,7 @@ const Navbar = () => {
                 { name: 'Coffee', path: '/specialty/coffee' }
             ]
         },
+        { name: t('nav.planTrip'), path: '/plan-your-trip' },
         {
             name: t('nav.infoNews'),
             path: '/news',
@@ -194,9 +195,7 @@ const Navbar = () => {
                             ))}
                         </div>
 
-                        <button className="btn-primary w-full">
-                            {t('nav.planTrip')}
-                        </button>
+
                     </motion.div>
                 )}
             </AnimatePresence>
