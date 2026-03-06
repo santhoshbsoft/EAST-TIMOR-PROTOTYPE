@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Filter, MapPin, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';

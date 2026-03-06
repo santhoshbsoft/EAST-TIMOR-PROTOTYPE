@@ -49,11 +49,26 @@ const Navbar = () => {
         { code: 'tt', label: 'Tetum' },
     ];
 
+    const lightPages = [
+        '/plan-your-trip/business-attractions',
+        '/plan-your-trip/flights-entry-requirements',
+        '/plan-your-trip/transport',
+        '/plan-your-trip/recommended-itineraries',
+        '/shopping-services',
+        '/plan-your-trip/shopping-services'
+    ];
+
+    const isLightPage = lightPages.some(path => location.pathname.startsWith(path));
+    const textColor = scrolled ? 'text-white' : (isLightPage ? 'text-slate-900' : 'text-white');
+    const accentColor = scrolled ? 'text-tropical-mint' : (isLightPage ? 'text-tropical-teal' : 'text-tropical-mint');
+    const hoverColor = scrolled ? 'hover:text-tropical-mint' : (isLightPage ? 'hover:text-tropical-teal' : 'hover:text-tropical-mint');
+    const borderColor = scrolled ? 'border-white/10' : (isLightPage ? 'border-slate-200' : 'border-white/10');
+
     return (
         <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'glass-dark py-4 !border-none' : 'bg-transparent py-6'}`}>
             <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-                <Link to="/" className="text-2xl font-serif font-bold tracking-tighter text-sand-beige">
-                    TIMOR-<span className="text-sunset-coral">LESTE</span>
+                <Link to="/" className={`text-2xl font-serif font-bold tracking-tighter ${textColor}`}>
+                    TIMOR-<span className={accentColor}>LESTE</span>
                 </Link>
 
                 {/* Desktop Nav */}
@@ -119,15 +134,12 @@ const Navbar = () => {
                         <Link to="/login" className="opacity-70 hover:opacity-100 transition-opacity">
                             <User size={20} />
                         </Link>
-                        <button className="btn-primary py-2 text-sm">
-                            Plan Your Trip
-                        </button>
                     </div>
                 </div>
 
                 {/* Mobile Menu Toggle */}
                 <button
-                    className="md:hidden text-sand-beige"
+                    className={`md:hidden ${scrolled ? 'text-white' : (isLightPage ? 'text-slate-900' : 'text-sand-beige')}`}
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -141,7 +153,7 @@ const Navbar = () => {
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
-                        className="absolute top-full left-0 w-full glass-dark py-10 px-6 flex flex-col space-y-6 md:hidden"
+                        className="absolute top-full left-0 w-full bg-forest-green shadow-xl py-10 px-6 flex flex-col space-y-6 md:hidden"
                     >
                         {navLinks.map((link) => (
                             <div key={link.name} className="flex flex-col items-center">

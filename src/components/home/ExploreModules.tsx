@@ -1,3 +1,4 @@
+'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Waves, Mountain, Landmark, Utensils, ArrowRight } from 'lucide-react';

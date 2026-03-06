@@ -1,7 +1,7 @@
-import React from 'react';
+'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { MapPin, Sun, Calendar, Wind, ArrowLeft, ArrowUpRight, Camera } from 'lucide-react';
+import { MapPin, Sun, Calendar, ArrowLeft, ArrowUpRight, Camera } from 'lucide-react';
 import { municipalitiesData } from '../data/municipalities';
 
 const MunicipalityDetail = () => {
