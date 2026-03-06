@@ -17,7 +17,7 @@ export const municipalitiesData: Municipality[] = [
         id: 'dili',
         name: 'Dili',
         region: 'Central',
-        image: 'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&q=80&w=1200',
+        image: 'https://www.timorleste.tl/wp-content/uploads/Tourism%20Timor-Leste-atauro-island.jpg',
         description: 'The vibrant capital of Timor-Leste.',
         longDescription: 'Dili is the main gateway to Timor-Leste, a city where Portuguese colonial relics stand alongside modern culture. From the iconic Cristo Rei statue to bustling waterfront markets, it offers a unique blend of history and coastal beauty.',
         pois: [
@@ -80,7 +80,10 @@ export const municipalitiesData: Municipality[] = [
         image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=1200',
         description: 'Misty mountains and coffee plantations.',
         longDescription: 'Aileu is a highland municipality known for its cool climate, misty mountain peaks, and lush coffee estates. It was a key location during the resistance.',
-        pois: [{ name: 'Aileu Cathedral', description: 'Historic church in the mountain mist.', image: 'https://images.unsplash.com/photo-14330864663cf0-226829677555?auto=format&fit=crop&q=80&w=400' }],
+        pois: [
+            { name: 'Aileu Cathedral', description: 'Historic church in the mountain mist.', image: 'https://www.timorleste.tl/wp-content/uploads/DSC00438-1-1.jpg' },
+            { name: 'Seloi Lake', description: 'Peaceful mountain lake surrounded by lush greenery.', image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=400' }
+        ],
         gallery: [
             'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=600',
             'https://images.unsplash.com/photo-1519331379826-f10be5486c6f?auto=format&fit=crop&q=80&w=600',
@@ -97,12 +100,15 @@ export const municipalitiesData: Municipality[] = [
         image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=1200',
         description: 'Home to the highest peak, Mt. Ramelau.',
         longDescription: 'Ainaro is famous for its rugged terrain and being the gateway to Mt. Ramelau, the highest peak in Timor-Leste and a site of deep spiritual significance.',
-        pois: [{ name: 'Mt. Ramelau Summit', description: 'Highest point in the country at 2,963m.', image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=400' }],
+        pois: [
+            { name: 'Mt. Ramelau Summit', description: 'Highest point in the country at 2,963m.', image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=400' },
+            { name: 'Hatu Builico', description: 'Charming mountain village at the base of Ramelau.', image: 'https://www.timorleste.tl/wp-content/uploads/Tourism%20Timor-Leste-tatamailau-0.jpg' }
+        ],
         gallery: [
             'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=600',
             'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&q=80&w=600',
             'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=600',
-            'https://images.unsplash.com/photo-1510784722466-f2aa9c52fed6?auto=format&fit=crop&q=80&w=600'
+            'https://media.istockphoto.com/id/2261248419/photo/beautiful-scenery-in-hatu-builico-village-towards-the-mount-ramelau-hiking-trail.webp?a=1&b=1&s=612x612&w=0&k=20&c=xBIz9-Iugbq8SZhNjnOtsyy9lwKB1pAqlkuKS-gU43s='
         ],
         weather: { temp: '20°C', condition: 'Cloudy' },
         highlights: ['Climbing', 'Spirituality']
@@ -114,7 +120,10 @@ export const municipalitiesData: Municipality[] = [
         image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=1200',
         description: 'Border adventures and hot springs.',
         longDescription: 'Located on the border with Indonesia, Bobonaro features historic forts, natural hot springs in Marobo, and high-altitude towns like Maliana.',
-        pois: [{ name: 'Marobo Hot Springs', description: 'Sulfuric natural springs with healing properties.', image: 'https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&q=80&w=400' }],
+        pois: [
+            { name: 'Marobo Hot Springs', description: 'Sulfuric natural springs with healing properties.', image: 'https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&q=80&w=400' },
+            { name: 'Fort Balibo', description: 'Historic Portuguese fort with panoramic views.', image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=400' }
+        ],
         gallery: [
             'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=600',
             'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=600',
@@ -131,10 +140,13 @@ export const municipalitiesData: Municipality[] = [
         image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=1200',
         description: 'Ancient traditions and southern shores.',
         longDescription: 'Covalima is rich in traditional culture and myths. Its southern coastline offers glimpses into the rugged beauty of the Timor Sea.',
-        pois: [{ name: 'Suai Church', description: 'Symbol of hope and reconciliation.', image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=400' }],
+        pois: [
+            { name: 'Suai Church', description: 'Symbol of hope and reconciliation.', image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=400' },
+            { name: 'Covalima Coast', description: 'Rugged southern coastline with dramatic waves.', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=400' }
+        ],
         gallery: [
             'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=600',
-            'https://images.unsplash.com/photo-1510784722466-f2aa9c52fed6?auto=format&fit=crop&q=80&w=600',
+            'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&q=80&w=600',
             'https://images.unsplash.com/photo-1533727937480-da3a97967e95?auto=format&fit=crop&q=80&w=600',
             'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=600'
         ],
@@ -148,7 +160,10 @@ export const municipalitiesData: Municipality[] = [
         image: 'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&q=80&w=1200',
         description: 'The heart of Timorese coffee.',
         longDescription: 'Ermera is the leading coffee-producing region in the country, characterized by giant shade trees and vast organic coffee plantations.',
-        pois: [{ name: 'Gleno Falls', description: 'Refreshing waterfall near the coffee heartland.', image: 'https://images.unsplash.com/photo-14330864663cf0-226829677555?auto=format&fit=crop&q=80&w=400' }],
+        pois: [
+            { name: 'Gleno Falls', description: 'Refreshing waterfall near the coffee heartland.', image: 'https://www.timorleste.tl/wp-content/uploads/Tourism%20Timor-Leste-tatamailau-0.jpg' },
+            { name: 'Letefoho Estates', description: 'Lush coffee plantations in the high mountains.', image: 'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&q=80&w=400' }
+        ],
         gallery: [
             'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&q=80&w=600',
             'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=600',
@@ -165,12 +180,15 @@ export const municipalitiesData: Municipality[] = [
         image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1200',
         description: 'Ancestral houses and wild nature.',
         longDescription: 'Lautém is home to the Konis Santana National Park, ancient spirit houses (Uma Lulik), and the stunning Jaco Island.',
-        pois: [{ name: 'Jaco Island', description: 'Virgin island with crystal clear turquoise water.', image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=400' }],
+        pois: [
+            { name: 'Jaco Island', description: 'Virgin island with crystal clear turquoise water.', image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=400' },
+            { name: 'Ili Lere Cultural Village', description: 'Traditional Fataluku houses and local crafts.', image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=400' }
+        ],
         gallery: [
             'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=600',
             'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=600',
             'https://images.unsplash.com/photo-1533727937480-da3a97967e95?auto=format&fit=crop&q=80&w=600',
-            'https://images.unsplash.com/photo-1510784722466-f2aa9c52fed6?auto=format&fit=crop&q=80&w=600'
+            'https://www.timorleste.tl/wp-content/uploads/Tourism%20Timor-Leste-tatamailau-0.jpg'
         ],
         weather: { temp: '29°C', condition: 'Sunny' },
         highlights: ['Heritage', 'Sanctuaries']
@@ -179,12 +197,15 @@ export const municipalitiesData: Municipality[] = [
         id: 'liquica',
         name: 'Liquiçá',
         region: 'North Coast',
-        image: 'https://images.unsplash.com/photo-14330864663cf0-226829677555?auto=format&fit=crop&q=80&w=1200',
+        image: 'https://media.istockphoto.com/id/1426699596/photo/traditional-timorese-thatched-roof-building-and-the-scenic-coastline-of-tibar-bay-liqui%C3%A7%C3%A1.webp?a=1&b=1&s=612x612&w=0&k=20&c=CM4rGrN4JRckoSlEK_pOpLEygGIutv3u7-FF5p_peiM=',
         description: 'Black sand beaches and colonial ruins.',
         longDescription: 'A short drive from Dili, Liquiçá offers beautiful black sand beaches and poignant reminders of the country\'s history through its colonial ruins.',
-        pois: [{ name: 'Ai Pelo Prison', description: 'Poignant colonial-era ruins by the sea.', image: 'https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&q=80&w=400' }],
+        pois: [
+            { name: 'Ai Pelo Prison', description: 'Poignant colonial-era ruins by the sea.', image: 'https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&q=80&w=400' },
+            { name: 'Liquiçá Waterfront', description: 'Stunning black sand coastline perfect for introspection.', image: 'https://media.istockphoto.com/id/1426699596/photo/traditional-timorese-thatched-roof-building-and-the-scenic-coastline-of-tibar-bay-liqui%C3%A7%C3%A1.webp?a=1&b=1&s=612x612&w=0&k=20&c=CM4rGrN4JRckoSlEK_pOpLEygGIutv3u7-FF5p_peiM=' }
+        ],
         gallery: [
-            'https://images.unsplash.com/photo-14330864663cf0-226829677555?auto=format&fit=crop&q=80&w=600',
+            'https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&q=80&w=600',
             'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=600',
             'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=600',
             'https://images.unsplash.com/photo-1568430462989-44163eb1752f?auto=format&fit=crop&q=80&w=600'
@@ -199,10 +220,13 @@ export const municipalitiesData: Municipality[] = [
         image: 'https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&q=80&w=1200',
         description: 'The narrowest part of the island.',
         longDescription: 'Manatuto spans from the north to the south coast. It is known for its pottery, salt production, and beautiful, uncrowded beaches.',
-        pois: [{ name: 'Laleia Bridge', description: 'Scenic drive with stunning river views.', image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=400' }],
+        pois: [
+            { name: 'Laleia Bridge', description: 'Scenic drive with stunning river views.', image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=400' },
+            { name: 'Manatuto Salt Fields', description: 'Traditional salt production along the coastal plains.', image: 'https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&q=80&w=400' }
+        ],
         gallery: [
             'https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&q=80&w=600',
-            'https://images.unsplash.com/photo-1510784722466-f2aa9c52fed6?auto=format&fit=crop&q=80&w=600',
+            'https://www.timorleste.tl/wp-content/uploads/Tourism%20Timor-Leste-tatamailau-0.jpg',
             'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=600',
             'https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&q=80&w=600'
         ],
@@ -216,11 +240,14 @@ export const municipalitiesData: Municipality[] = [
         image: 'https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&q=80&w=1200',
         description: 'The historic capital of Same.',
         longDescription: 'Manufahi, with its capital Same, is a place of deep historical pride, set against the backdrop of the Kablaki mountain range.',
-        pois: [{ name: 'Betano Beach', description: 'Wild southern coast with historic significance.', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=400' }],
+        pois: [
+            { name: 'Betano Beach', description: 'Wild southern coast with historic significance.', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=400' },
+            { name: 'Same Highland Market', description: 'Vibrant local market in the mountain shadow.', image: 'https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&q=80&w=400' }
+        ],
         gallery: [
             'https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&q=80&w=600',
             'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=600',
-            'https://images.unsplash.com/photo-1510784722466-f2aa9c52fed6?auto=format&fit=crop&q=80&w=600',
+            'https://www.timorleste.tl/wp-content/uploads/Tourism%20Timor-Leste-tatamailau-0.jpg',
             'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=600'
         ],
         weather: { temp: '26°C', condition: 'Rainy' },
@@ -230,17 +257,40 @@ export const municipalitiesData: Municipality[] = [
         id: 'viqueque',
         name: 'Viqueque',
         region: 'South Coast',
-        image: 'https://images.unsplash.com/photo-1510784722466-f2aa9c52fed6?auto=format&fit=crop&q=80&w=1200',
+        image: 'https://www.timorleste.tl/wp-content/uploads/kibular.jpg',
         description: 'Wild southern frontier.',
         longDescription: 'Viqueque is the largest municipality, offering vast plains, sacred caves, and a wilder, less-explored side of Timor-Leste.',
-        pois: [{ name: 'Loi-Hunu Falls', description: 'Untouched waterfalls in the deep south.', image: 'https://images.unsplash.com/photo-14330864663cf0-226829677555?auto=format&fit=crop&q=80&w=400' }],
+        pois: [
+            { name: 'Loi-Hunu Falls', description: 'Untouched waterfalls in the deep south.', image: 'https://media.istockphoto.com/id/826358848/photo/waterfall-ullim-north-korea.webp?a=1&b=1&s=612x612&w=0&k=20&c=zs03Snj9LcG2FzCeAMRHMCiUOASrQSd5KBakTb3sUHM=' },
+            { name: 'Uato-Lari Coast', description: 'Pristine and wild beaches of the southern frontier.', image: 'https://media.istockphoto.com/id/1253498530/photo/black-sea-coast-and-kiseleva-rock.webp?a=1&b=1&s=612x612&w=0&k=20&c=2bi1o_zx6qziUaZeJ3Ov83-lX2wAVSkR035HPWBHrVA=' }
+        ],
         gallery: [
-            'https://images.unsplash.com/photo-1510784722466-f2aa9c52fed6?auto=format&fit=crop&q=80&w=600',
+            'https://media.istockphoto.com/id/972350248/photo/shore-of-anadolu-feneri.webp?a=1&b=1&s=612x612&w=0&k=20&c=rfYjXjrY99fXCG1XA0afia3nJpfivxprJwRY2NBxxa4=',
             'https://images.unsplash.com/photo-1533727937480-da3a97967e95?auto=format&fit=crop&q=80&w=600',
             'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=600',
             'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&q=80&w=600'
         ],
         weather: { temp: '28°C', condition: 'Humid' },
         highlights: ['Caves', 'Adventure']
+    },
+    {
+        id: 'oecusse',
+        name: 'Oecusse',
+        region: 'West (Enclave)',
+        image: 'https://www.timorleste.tl/wp-content/uploads/Tourism%20Timor-Leste-tourism--2.jpg',
+        description: 'A coastal enclave with rich history.',
+        longDescription: 'Oecusse is a unique enclave of Timor-Leste within Indonesian West Timor. It is the birthplace of the nation\'s contemporary history, where the Portuguese first landed in Lifau. Today, it combines historical monuments with rugged volcanic mountains and pristine coastline.',
+        pois: [
+            { name: 'Lifau Monument', description: 'The site where the first Portuguese explorers and missionaries landed in 1515.', image: 'https://www.timorleste.tl/wp-content/uploads/DSC00438-1-1.jpg' },
+            { name: 'Pante Macassar Waterfront', description: 'The capital city\'s scenic and historical waterfront area.', image: 'https://www.timorleste.tl/wp-content/uploads/Tourism%20Timor-Leste-atauro-island.jpg' }
+        ],
+        gallery: [
+            'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=600',
+            'https://www.timorleste.tl/wp-content/uploads/DSC00438-1-1.jpg',
+            'https://www.timorleste.tl/wp-content/uploads/Tourism%20Timor-Leste-atauro-island.jpg',
+            'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&q=80&w=600'
+        ],
+        weather: { temp: '30°C', condition: 'Clear' },
+        highlights: ['History', 'Enclave', 'Coastal']
     }
 ];

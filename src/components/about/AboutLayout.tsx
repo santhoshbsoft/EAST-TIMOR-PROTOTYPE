@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface AboutLayoutProps {
     title: string;
@@ -61,12 +62,21 @@ const AboutLayout: React.FC<AboutLayoutProps> = ({ title, subtitle, heroImage, c
                 <div className="max-w-7xl mx-auto">
                     <h3 className="text-2xl font-serif font-bold mb-10">Explore More Topics</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-                        {['History', 'Culture', 'Nature', 'Wildlife'].map((topic) => (
-                            <button key={topic} className="glass p-6 rounded-2xl flex flex-col items-start group hover:bg-sunset-coral transition-colors">
+                        {[
+                            { name: 'History', path: '/about/history' },
+                            { name: 'Culture', path: '/about/culture' },
+                            { name: 'Nature', path: '/about/nature' },
+                            { name: 'Wildlife', path: '/about/wildlife' }
+                        ].map((topic) => (
+                            <Link
+                                key={topic.name}
+                                to={topic.path}
+                                className="glass p-6 rounded-2xl flex flex-col items-start group hover:bg-sunset-coral transition-colors"
+                            >
                                 <span className="text-xs uppercase font-bold opacity-50 mb-2 group-hover:opacity-100">Chapter</span>
-                                <span className="text-xl font-bold mb-4">{topic}</span>
+                                <span className="text-xl font-bold mb-4">{topic.name}</span>
                                 <ArrowRight className="mt-auto group-hover:translate-x-2 transition-transform" />
-                            </button>
+                            </Link>
                         ))}
                     </div>
                 </div>
