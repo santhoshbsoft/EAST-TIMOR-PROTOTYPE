@@ -1,11 +1,11 @@
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
     Calendar, List, MapPin, Search, Filter,
-    Heart, ChevronRight, Clock, Map as MapIcon, ChevronLeft
+    Heart, ChevronRight, Clock, ChevronLeft
 } from 'lucide-react';
-import { eventsData, EventCategory, EventInfo } from '../data/events';
+import { eventsData, EventCategory } from '../data/events';
 import eventsHeroImg from '../assets/images/plan-your-trip/events.jpg';
 
 const EventsCalendar: React.FC = () => {
@@ -40,7 +40,6 @@ const EventsCalendar: React.FC = () => {
     }, [searchQuery, selectedCategory, selectedLocation]);
 
     // Calendar View Helpers (Very basic implementation for visual representation)
-    const currentDate = new Date('2024-03-01'); // Fixed to start near the initial mock data
     const daysInMonth = 31;
     const calendarDays = Array.from({ length: daysInMonth }, (_, i) => i + 1);
 

@@ -61,8 +61,6 @@ const Navbar = () => {
     const isLightPage = lightPages.some(path => location.pathname.startsWith(path));
     const textColor = scrolled ? 'text-white' : (isLightPage ? 'text-slate-900' : 'text-white');
     const accentColor = scrolled ? 'text-tropical-mint' : (isLightPage ? 'text-tropical-teal' : 'text-tropical-mint');
-    const hoverColor = scrolled ? 'hover:text-tropical-mint' : (isLightPage ? 'hover:text-tropical-teal' : 'hover:text-tropical-mint');
-    const borderColor = scrolled ? 'border-white/10' : (isLightPage ? 'border-slate-200' : 'border-white/10');
 
     return (
         <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'glass-dark py-4 !border-none' : 'bg-transparent py-6'}`}>
