@@ -11,6 +11,10 @@ const getHash = (str: string) => {
     return Math.abs(hash);
 };
 
+
+
+
+
 const getAccommodationImage = (acc: any) => {
     const isPlaceholder = acc.featureImage.includes('unsplash.com');
     if (!isPlaceholder) return acc.featureImage;
