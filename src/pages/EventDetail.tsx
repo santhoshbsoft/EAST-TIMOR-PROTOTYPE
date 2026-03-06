@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import {
-    Calendar, MapPin, Clock, ArrowLeft, Share2,
-    Ticket, Globe, Phone, Map as MapIcon, ChevronRight
+    Calendar, MapPin, ArrowLeft, Share2,
+    Ticket, Globe, Phone, Map as MapIcon
 } from 'lucide-react';
 import { eventsData } from '../data/events';
 

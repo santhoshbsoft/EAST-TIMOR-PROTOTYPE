@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Newspaper, Trophy, Sparkles } from 'lucide-react';
-import NewsFeed from '../components/news/NewsFeed';
-import EventsCalendar from '../components/news/EventsCalendar';
+import NewsListing from './NewsListing';
+import EventsCalendar from './EventsCalendar';
 
 const NewsEvents = () => {
     const [activeSection, setActiveSection] = useState('news');
@@ -59,7 +59,7 @@ const NewsEvents = () => {
                                     </div>
                                     <h2 className="text-3xl font-serif font-bold text-sand-beige italic">Featured Narrative</h2>
                                 </div>
-                                <NewsFeed />
+                                <NewsListing />
                             </div>
                         ) : (
                             <div className="max-w-5xl mx-auto text-center">

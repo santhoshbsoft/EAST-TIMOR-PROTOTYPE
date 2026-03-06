@@ -1,12 +1,9 @@
-'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Waves, Mountain, Landmark, Utensils, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { categories } from '../../data/experiences';
-import { useLanguage } from '../../context/LanguageContext';
 
 const ExploreModules = () => {
-    const { t } = useLanguage();
 
     // Filter out 'all' and 'popular' for the modules
     const displayCategories = categories.filter(cat => cat.id !== 'all' && cat.id !== 'popular');

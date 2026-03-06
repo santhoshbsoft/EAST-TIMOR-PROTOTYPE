@@ -1,4 +1,3 @@
-import React from 'react';
 import AboutLayout from './AboutLayout';
 import SectionText from './SectionText';
 

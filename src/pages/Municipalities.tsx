@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Search, Filter, MapPin, ChevronRight } from 'lucide-react';
+import { Search, MapPin, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { municipalitiesData } from '../data/municipalities';
 import { useLanguage } from '../context/LanguageContext';
