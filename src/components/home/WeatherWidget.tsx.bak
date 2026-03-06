@@ -1,6 +1,6 @@
 'react';
 import { motion } from 'framer-motion';
-import { Sun, Wind, Droplets, Thermometer } from 'lucide-react';
+import { Sun, CloudRain, Wind, Droplets, Thermometer, Calendar } from 'lucide-react';
 
 const municipalities = ['Dili', 'Atauro', 'Baucau', 'Lospalos', 'Viqueque'];
 

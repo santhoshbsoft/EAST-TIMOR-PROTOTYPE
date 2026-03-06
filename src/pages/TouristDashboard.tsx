@@ -1,5 +1,4 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+'react';
 import { User, Heart, Calendar, FileText, Settings, LogOut, Star, Clock } from 'lucide-react';
 
 const SidebarItem = ({ icon: Icon, label, active = false }: any) => (
