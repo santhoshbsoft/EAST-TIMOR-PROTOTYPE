@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Filter, MapPin, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 import { municipalitiesData } from '../data/municipalities';
+import { useLanguage } from '../context/LanguageContext';
 
 const Municipalities = () => {
+    const { t } = useLanguage();
     const [searchTerm, setSearchTerm] = useState('');
 
     const filteredMunicipalities = municipalitiesData.filter(m =>
@@ -22,8 +23,7 @@ const Municipalities = () => {
                         animate={{ opacity: 1, y: 0 }}
                         className="section-title mb-6"
                     >
-                        Explore <br />
-                        Our Municipalities
+                        {t('municipalities.title')}
                     </motion.h1>
 
                     <div className="flex flex-col md:row gap-6">
@@ -37,10 +37,10 @@ const Municipalities = () => {
                                 onChange={(e) => setSearchTerm(e.target.value)}
                             />
                         </div>
-                        <button className="glass-dark px-8 py-4 rounded-2xl border border-white/5 flex items-center space-x-3 hover:bg-white/5 transition-colors">
+                        {/* <button className="glass-dark px-8 py-4 rounded-2xl border border-white/5 flex items-center space-x-3 hover:bg-white/5 transition-colors">
                             <Filter size={20} />
                             <span>Filters</span>
-                        </button>
+                        </button> */}
                     </div>
                 </header>
 

@@ -4,19 +4,20 @@ import { MapPin, ArrowRight, Users, Mountain, Waves } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const municipalities = [
-    { id: 'dili', name: 'Dili', x: '38%', y: '28%', population: '277,279', highlight: 'Capital city, Cristo Rei statue', icon: 'city' },
-    { id: 'atauro', name: 'Atauro', x: '36%', y: '8%', population: '9,274', highlight: 'World-class diving & coral reefs', icon: 'waves' },
+    { id: 'dili', name: 'Dili', x: '44%', y: '32%', population: '277,279', highlight: 'Capital city, Cristo Rei statue', icon: 'city' },
+    { id: 'atauro', name: 'Atauro', x: '44%', y: '10%', population: '9,274', highlight: 'World-class diving & coral reefs', icon: 'waves' },
     { id: 'baucau', name: 'Baucau', x: '62%', y: '32%', population: '123,203', highlight: 'Colonial architecture & beaches', icon: 'mountain' },
     { id: 'lautem', name: 'Lautém', x: '82%', y: '30%', population: '65,440', highlight: 'Jaco Island & ancient forts', icon: 'waves' },
-    { id: 'viqueque', name: 'Viqueque', x: '68%', y: '52%', population: '76,033', highlight: 'Sacred mountains & traditions', icon: 'mountain' },
+    { id: 'viqueque', name: 'Viqueque', x: '67%', y: '52%', population: '76,033', highlight: 'Sacred mountains & traditions', icon: 'mountain' },
     { id: 'manatuto', name: 'Manatuto', x: '50%', y: '35%', population: '45,541', highlight: 'Salt pans & fishing villages', icon: 'waves' },
-    { id: 'aileu', name: 'Aileu', x: '35%', y: '42%', population: '48,836', highlight: 'Highland coffee plantations', icon: 'mountain' },
-    { id: 'ainaro', name: 'Ainaro', x: '30%', y: '58%', population: '63,136', highlight: 'Mt. Ramelau – highest peak', icon: 'mountain' },
-    { id: 'manufahi', name: 'Manufahi', x: '40%', y: '65%', population: '52,188', highlight: 'Waterfalls & resistance history', icon: 'mountain' },
-    { id: 'liquica', name: 'Liquiçá', x: '25%', y: '30%', population: '71,927', highlight: 'Portuguese-era fort & beaches', icon: 'waves' },
-    { id: 'ermera', name: 'Ermera', x: '22%', y: '42%', population: '125,702', highlight: 'Premium coffee heartland', icon: 'mountain' },
-    { id: 'bobonaro', name: 'Bobonaro', x: '12%', y: '45%', population: '97,762', highlight: 'Border town & hot springs', icon: 'mountain' },
-    { id: 'covalima', name: 'Cova Lima', x: '18%', y: '65%', population: '65,301', highlight: 'Suai beaches & wetlands', icon: 'waves' },
+    { id: 'aileu', name: 'Aileu', x: '44%', y: '45%', population: '48,836', highlight: 'Highland coffee plantations', icon: 'mountain' },
+    { id: 'ainaro', name: 'Ainaro', x: '35%', y: '65%', population: '63,136', highlight: 'Mt. Ramelau – highest peak', icon: 'mountain' },
+    { id: 'manufahi', name: 'Manufahi', x: '45%', y: '68%', population: '52,188', highlight: 'Waterfalls & resistance history', icon: 'mountain' },
+    { id: 'liquica', name: 'Liquiçá', x: '31%', y: '35%', population: '71,927', highlight: 'Portuguese-era fort & beaches', icon: 'waves' },
+    { id: 'ermera', name: 'Ermera', x: '30%', y: '50%', population: '125,702', highlight: 'Premium coffee heartland', icon: 'mountain' },
+    { id: 'bobonaro', name: 'Bobonaro', x: '18%', y: '55%', population: '97,762', highlight: 'Border town & hot springs', icon: 'mountain' },
+    { id: 'covalima', name: 'Cova Lima', x: '22%', y: '68%', population: '65,301', highlight: 'Suai beaches & wetlands', icon: 'waves' },
+    { id: 'oecusse', name: 'Oecusse', x: '5%', y: '50%', population: '72,135', highlight: 'Historic enclave & Lifau monument', icon: 'city' },
 ];
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -64,12 +65,51 @@ const IslandMap = () => {
                     <div className="lg:col-span-2">
                         <div className="relative glass-dark rounded-[40px] p-6 md:p-12 aspect-[16/10] overflow-hidden border border-white/5 shadow-2xl">
                             {/* Background Map Shape - simplified Timor-Leste outline */}
-                            <svg viewBox="0 0 800 400" className="absolute inset-0 w-full h-full opacity-10 p-8">
-                                <path
-                                    d="M80,200 Q100,160 160,150 Q200,140 240,130 Q280,120 320,125 Q360,130 400,140 Q440,150 480,145 Q520,140 560,135 Q600,130 640,140 Q680,150 720,170 Q740,180 730,200 Q720,220 700,235 Q680,250 640,255 Q600,260 560,250 Q520,240 480,245 Q440,250 400,260 Q360,270 320,265 Q280,260 240,250 Q200,240 160,235 Q120,230 90,220 Q75,210 80,200 Z"
+                            {/* Background Map Shape - Detailed Timor-Leste outline */}
+                            <svg viewBox="0 0 800 400" className="absolute inset-0 w-full h-full opacity-20 p-8 filter drop-shadow-[0_0_15px_rgba(245,230,200,0.3)]">
+                                {/* Main Island */}
+                                <motion.path
+                                    initial={{ pathLength: 0, opacity: 0 }}
+                                    whileInView={{ pathLength: 1, opacity: 1 }}
+                                    transition={{ duration: 2, ease: "easeInOut" }}
+                                    d="M100,200 L120,180 L180,165 L250,140 L350,130 L450,135 L550,130 L650,145 L750,180 L760,210 L740,240 L650,260 L550,250 L450,265 L350,275 L250,270 L150,240 L110,220 Z"
+                                    fill="rgba(245, 230, 200, 0.05)"
+                                    stroke="#F5E6C8"
+                                    strokeWidth="1.5"
+                                    strokeLinejoin="round"
+                                />
+                                {/* Atauro Island */}
+                                <motion.path
+                                    initial={{ opacity: 0 }}
+                                    whileInView={{ opacity: 1 }}
+                                    transition={{ delay: 1 }}
+                                    d="M340,30 Q350,20 370,30 Q380,45 365,60 Q345,70 335,55 Q330,40 340,30"
+                                    fill="rgba(245, 230, 200, 0.05)"
+                                    stroke="#F5E6C8"
+                                    strokeWidth="1"
+                                />
+                                {/* Oecusse Enclave */}
+                                <motion.path
+                                    initial={{ opacity: 0 }}
+                                    whileInView={{ opacity: 1 }}
+                                    transition={{ delay: 1.5 }}
+                                    d="M20,180 Q40,170 60,185 Q70,210 50,225 Q30,220 25,200 Z"
+                                    fill="rgba(245, 230, 200, 0.05)"
+                                    stroke="#F5E6C8"
+                                    strokeWidth="1"
+                                />
+                                {/* Jaco Island */}
+                                <motion.circle cx="785" cy="185" r="5" fill="rgba(245, 230, 200, 0.05)" stroke="#F5E6C8" strokeWidth="1" />
+                                {/* Topographic/Terrain Lines (Subtle) */}
+                                <motion.path
+                                    initial={{ opacity: 0 }}
+                                    whileInView={{ opacity: 0.1 }}
+                                    transition={{ delay: 2.5 }}
+                                    d="M200,180 Q300,170 400,185 M500,160 Q600,155 700,170 M300,230 Q400,240 500,225"
                                     fill="none"
                                     stroke="#F5E6C8"
-                                    strokeWidth="2"
+                                    strokeWidth="0.5"
+                                    strokeDasharray="4 4"
                                 />
                             </svg>
 
